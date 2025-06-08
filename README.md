@@ -1,8 +1,8 @@
 Liver Segmentation Project using MONAI
 
-[link.](https://github.com/asthabaj/liver-segmentation-using-MONAI/blob/b2d36e8e2a5479bca23a2f18d6b91440003b2ec8/long_liver_segment.ipynb) - this one is where the cropped files aren't saved so it saves storage but takes a LOOOOOONG time. bujhena maile tyo long wala ko link i want it to be here the notebook
+[link](https://github.com/asthabaj/liver-segmentation-using-MONAI/blob/b2d36e8e2a5479bca23a2f18d6b91440003b2ec8/long_liver_segment.ipynb) - this one does not save the cropped patches so it saves storage but takes a LOOOOOONG time to train.
 
-[link](https://github.com/asthabaj/liver-segmentation-using-MONAI/blob/b2d36e8e2a5479bca23a2f18d6b91440003b2ec8/liv_seg.ipynb) - this one saved the file in local storage but really saves a LOT of time while training.
+[link](https://github.com/asthabaj/liver-segmentation-using-MONAI/blob/b2d36e8e2a5479bca23a2f18d6b91440003b2ec8/liv_seg.ipynb) - this one saves the file in local storage but really saves a LOT of time while training. 
 
 Result
 
