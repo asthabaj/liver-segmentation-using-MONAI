@@ -28,3 +28,16 @@ Evaluated on 13 test volumes.
 ![WhatsApp Image 2025-07-02 at 10 29 54_5378edf0](https://github.com/user-attachments/assets/e7132141-ce15-4e53-a4cf-8d5f8d02c22b)
 
 
+Medsam using TotalSegmentator for prompt box
+
+Using liver masks from Total Segmentator result above.
+
+![WhatsApp Image 2025-07-02 at 14 38 06_fa3538a7](https://github.com/user-attachments/assets/8dad6fbc-f83f-484d-9ae9-916ee42607e4)
+
+![WhatsApp Image 2025-07-02 at 14 38 10_da3ca044](https://github.com/user-attachments/assets/71be1851-42ae-436e-90e8-3621a332b519)
+
+![WhatsApp Image 2025-07-02 at 14 38 47_beb9b62d](https://github.com/user-attachments/assets/c383307b-3968-479b-8b35-8b3b822060fe)
+
+
+
+
