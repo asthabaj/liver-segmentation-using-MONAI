@@ -42,7 +42,7 @@ def jaccard_score(pred, gt):
     return intersection / union
 
 
-print("--- Starting Liver Segmentation and Evaluation ---")
+print("Starting Liver Segmentation and Evaluation")
 
 all_dice_scores = []
 all_jaccard_scores = []
@@ -80,7 +80,7 @@ else:
                 destination_final_mask_path = os.path.join(final_liver_masks_dir, final_mask_filename)
                 
                 shutil.copyfile(total_seg_liver_mask_path, destination_final_mask_path)
-                print(f"✓ Saved TotalSegmentator liver mask to: {destination_final_mask_path}")
+                print(f"Saved TotalSegmentator liver mask to: {destination_final_mask_path}")
 
                 ct_img = nib.load(input_path)
                 ct_data = ct_img.get_fdata()
@@ -90,7 +90,7 @@ else:
 
 
                 if not (os.path.exists(gt_path) and os.path.exists(total_seg_liver_mask_path)):
-                    print(f"✗ Skipping {base_name}: Missing ground truth ({gt_path}) or TotalSegmentator output ({total_seg_liver_mask_path}).")
+                    print(f"Skipping {base_name}: Missing ground truth ({gt_path}) or TotalSegmentator output ({total_seg_liver_mask_path}).")
                     continue
 
                 gt_img = nib.load(gt_path)
@@ -103,7 +103,7 @@ else:
                 total_seg_binary = (total_seg_data > 0).astype(np.uint8)
 
                 if gt_binary.shape != total_seg_binary.shape:
-                    print(f"✗ Shape mismatch for {base_name}: Ground Truth shape {gt_binary.shape} vs TotalSegmentator shape {total_seg_binary.shape}. Skipping metric calculation for this case.")
+                    print(f"Shape mismatch for {base_name}: Ground Truth shape {gt_binary.shape} vs TotalSegmentator shape {total_seg_binary.shape}. Skipping metric calculation for this case.")
                     continue
 
                 dice = dice_score(total_seg_binary, gt_binary)
@@ -144,21 +144,21 @@ else:
                 slice_output_path = os.path.join(output_slice_images_dir, f"{base_name}_slice_{slice_idx}.png")
                 plt.savefig(slice_output_path)
                 plt.close()
-                print(f"✓ Saved slice visualization to: {slice_output_path}")
+                print(f"Saved slice visualization to: {slice_output_path}")
 
             else:
-                print(f"✗ Liver mask ('liver.nii.gz') not found for {vol_file} in {totalseg_case_output_dir}")
+                print(f"Liver mask ('liver.nii.gz') not found for {vol_file} in {totalseg_case_output_dir}")
 
         except subprocess.CalledProcessError as e:
-            print(f"✗ Error running TotalSegmentator for {vol_file}: {e}")
+            print(f"Error running TotalSegmentator for {vol_file}: {e}")
         except FileNotFoundError:
-            print("✗ TotalSegmentator command not found. Ensure it's installed and added to your system's PATH.")
+            print("TotalSegmentator command not found. Ensure it's installed and added to your system's PATH.")
             break
         except Exception as e:
             print(f"An unexpected error occurred while processing {vol_file}: {e}")
 
 
-print("\n--- Summary of Liver Segmentation Results ---")
+print("\n Summary of Liver Segmentation Results")
 
 if processed_case_names:
     for name, d, j in zip(processed_case_names, all_dice_scores, all_jaccard_scores):
@@ -181,9 +181,9 @@ if processed_case_names:
     average_scores_plot_path = os.path.join(output_slice_images_dir, "average_scores_bar_chart.png")
     plt.savefig(average_scores_plot_path)
     plt.close()
-    print(f"✓ Saved average scores bar chart to: {average_scores_plot_path}")
+    print(f"Saved average scores bar chart to: {average_scores_plot_path}")
 
 else:
     print("No volumes were successfully processed for evaluation.")
 
-print("\n--- Processing Complete ---")
+print("\n Processing Complete ")
