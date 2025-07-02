@@ -15,3 +15,16 @@ Output
 Link to drive containing data and model
 
 https://drive.google.com/drive/folders/1DCLGo85xVr3e-BqODHvpVa9Hw99kGYQF?usp=drive_link 
+
+
+Total Segmentator
+
+Evaluated on 13 test volumes.
+
+![average_scores_bar_chart](https://github.com/user-attachments/assets/fd59d475-49b7-4631-a8bb-c2d9039d642d)
+
+![liver_110_slice_438](https://github.com/user-attachments/assets/f9803eda-dc32-4fcf-8de8-1cdef2672773)
+
+![WhatsApp Image 2025-07-02 at 10 29 54_5378edf0](https://github.com/user-attachments/assets/e7132141-ce15-4e53-a4cf-8d5f8d02c22b)
+
+
